@@ -11,7 +11,8 @@ def main():
 
         if line.startswith("SAVE "):
             filename = line.split(" ", 1)[1]
-            with open(filename, "w") as f:
+            savepath = f"../Documents/{filename}"
+            with open(savepath, "w") as f:
                 f.write("\n".join(text))
             print(f"File {filename} saved successfully")
 
